@@ -1,0 +1,4 @@
+Django == 3.0.7
+pandas == 1.5.0
+spacy
+./eng_lab/en_core_web_sm-3.0.0.tar.gz
