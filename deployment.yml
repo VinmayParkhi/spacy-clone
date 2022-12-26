@@ -15,7 +15,7 @@ spec:
         app: nodeapp
     spec:
       containers:
-      - image: kirti-python-docker:112
+      - image: deployondocker.azurecr.io/kirti-python-docker:112
         name: python
         ports:
         - containerPort: 8080
