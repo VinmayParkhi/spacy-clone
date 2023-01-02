@@ -17,6 +17,7 @@ phases:
       - pip install --upgrade pip
   build:
     commands:
+      - which docker
       - docker build -t spacy .
       - docker run -itd --name spacy -p 8000:8000 spacy:latest
 #artifacts:
