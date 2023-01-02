@@ -17,13 +17,8 @@ phases:
       - pip install --upgrade pip
   build:
     commands:
-      - which docker
-      - pwd
-      - ls -lrt
-      - systemctl restart docker
-      - chmod 777 /var/run/docker.sock
-      - docker build -t spacy .
-      - docker run -itd --name spacy -p 8000:8000 spacy:latest
+      - pip3 install -r requirements.txt
+      - pip3 install spacy
 #artifacts:
   #files:
     # - We don't currently preserve any artifacts
