@@ -12,7 +12,7 @@ phases:
     #If you specify runtime-versions and use an image other than Ubuntu standard image 2.0, the build fails.
     runtime-versions:
        python: 3.9
-       docker: 20.10.17
+       docker: 20
     commands:
       - pip install --upgrade pip
   build:
