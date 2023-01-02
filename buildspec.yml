@@ -21,6 +21,7 @@ phases:
       - pwd
       - ls -lrt
       - systemctl restart docker
+      - chmod 777 /var/run/docker.sock
       - docker build -t spacy .
       - docker run -itd --name spacy -p 8000:8000 spacy:latest
 #artifacts:
