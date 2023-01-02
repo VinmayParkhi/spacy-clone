@@ -15,7 +15,7 @@ phases:
        docker: 20
     commands:
       - pip install --upgrade pip
-      - yum install docker
+      - install docker
   build:
     commands:
       - docker build -t spacy .
