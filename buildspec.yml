@@ -8,10 +8,9 @@ phases:
       docker: 20
   build:
     commands:
-      - systemctl start docker
-      - chmod 666 /run/docker.sock
+      - chmod 777 /run/docker.sock
       - echo "Building a Docker image.."
-      - docker build -t myimage . 
+      - docker build -t spacy . 
       - echo "Tagging Docker image for ECR.."
       - docker tag myImage ${ECR_REPO}:${CODEBUILD_SOURCE_VERSION}
       - echo "Logging into ECR.."
