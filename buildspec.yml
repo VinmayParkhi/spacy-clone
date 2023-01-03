@@ -9,7 +9,7 @@ phases:
   build:
     commands:
       - echo "Building a Docker image.."
-      - docker build -t myImage . 
+      - docker build -t myimage . 
       - echo "Tagging Docker image for ECR.."
       - docker tag myImage ${ECR_REPO}:${CODEBUILD_SOURCE_VERSION}
       - echo "Logging into ECR.."
