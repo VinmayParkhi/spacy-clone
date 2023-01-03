@@ -23,7 +23,7 @@ artifacts:
     files:
       -'**/*'
     discard-paths: yes
-    base-directory: drop
+    base-directory: location
 #cache:
   #paths:
     # - We don't currently cache anything
