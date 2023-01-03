@@ -8,7 +8,6 @@ phases:
       docker: 20
   build:
     commands:
-      - chmod +x ./docker.sock
       - echo "Building a Docker image.."
       - docker build -t spacy . 
       - echo "Tagging Docker image for ECR.."
