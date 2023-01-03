@@ -12,8 +12,8 @@ phases:
       - docker build -t spacy . 
       - echo "Tagging Docker image for ECR.."
       - docker tag spacy:latest 928052840712.dkr.ecr.us-east-2.amazonaws.com/spacy-image:latest
-      - echo "Logging into ECR.."
-      - $(aws ecr get-login --no-include-email)
+      ##- echo "Logging into ECR.."
+     ## - $(aws ecr get-login --no-include-email)
       - echo "Pushing Docker image to ECR.."
       - docker push 928052840712.dkr.ecr.us-east-2.amazonaws.com/spacy-image:latest
       - echo "Done."
