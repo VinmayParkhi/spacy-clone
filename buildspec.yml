@@ -19,12 +19,11 @@ phases:
     commands:
       - pip3 install -r requirements.txt
       - pip3 install spacy
-#artifacts:
-  #files:
-    # - We don't currently preserve any artifacts
-  #name: $(date +%Y-%m-%d)
-  #discard-paths: yes
-  #base-directory: location
+  artifacts:
+    files:
+      -'**/*'
+    discard-paths: yes
+    base-directory: drop
 #cache:
   #paths:
     # - We don't currently cache anything
