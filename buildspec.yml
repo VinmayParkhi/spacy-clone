@@ -4,10 +4,8 @@ env:
     ECR_REPO: 928052840712.dkr.ecr.us-east-2.amazonaws.com/spacy
 phases:
   install:
-    commands: 
-      - sudo yum install docker
-      - sudo systemctl enable docker.service
-      - sudo systemctl start docker.service
+    runtime-versions:
+        docker: 20
   build:
     commands:
       - echo "Building a Docker image.."
