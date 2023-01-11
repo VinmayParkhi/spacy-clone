@@ -12,13 +12,13 @@ phases:
       - echo "Building a Docker image.."
       - docker build -t spacy . --file Dockerfile
       - echo "Tagging Docker image for ECR.."
-      - docker tag spacy:v1 928052840712.dkr.ecr.us-east-2.amazonaws.com/spacy:v1
+      - docker tag spacy:latest 928052840712.dkr.ecr.us-east-2.amazonaws.com/spacy:latest
       - aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 928052840712.dkr.ecr.us-east-2.amazonaws.com
       - echo "Logging into ECR.."
       - $(aws ecr get-login --no-include-email)
       - echo "Pushing Docker image to ECR.."
-      - docker push 928052840712.dkr.ecr.us-east-2.amazonaws.com/spacy:v1
+      - docker push 928052840712.dkr.ecr.us-east-2.amazonaws.com/spacy:latest
       - echo "Done."
-      - printf '[{"name":"spacy-clone","imageUri":"%s"}]' 928052840712.dkr.ecr.us-east-2.amazonaws.com/spacy:v1 > imagedefinitions.json
+      - printf '[{"name":"spacy-clone","imageUri":"%s"}]' 928052840712.dkr.ecr.us-east-2.amazonaws.com/spacy:latest > imagedefinitions.json
 artifacts:
   files: imagedefinitions.json
