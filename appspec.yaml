@@ -1,0 +1,9 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:us-east-2:928052840712:task-definition/spacy-clone:1"
+        LoadBalancerInfo:
+          ContainerName: "spacy-clone"
+          ContainerPort: 80
