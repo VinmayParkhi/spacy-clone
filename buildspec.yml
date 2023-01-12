@@ -21,4 +21,15 @@ phases:
       - echo "Done."
       - printf '[{"name":"spacy-clone","imageUri":"%s"}]' 928052840712.dkr.ecr.us-east-2.amazonaws.com/spacy:latest > imagedefinitions.json
 artifacts:
-  files: imagedefinitions.json
+  files: 
+    - 'image*.json'
+    - 'appspec.yaml'
+    - 'taskdef.json'
+  secondary-artifacts:
+    DefinitionArtifact:
+      files:
+        - appspec.yaml
+        - taskdef.json
+    ImageArtifact:
+      files:
+        - imageDetail.json
