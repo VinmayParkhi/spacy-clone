@@ -37,7 +37,7 @@
       "memoryReservation": 128,
       "volumesFrom": [],
       "stopTimeout": null,
-      "image": "928052840712.dkr.ecr.us-east-2.amazonaws.com/spacy",
+      "image": "928052840712.dkr.ecr.us-east-2.amazonaws.com/spacy:latest",
       "startTimeout": null,
       "firelensConfiguration": null,
       "dependsOn": null,
