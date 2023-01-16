@@ -22,7 +22,7 @@ phases:
       - printf '[{"name":"spacy-clone","imageUri":"%s"}]' 928052840712.dkr.ecr.us-east-2.amazonaws.com/spacy:latest > imageDetail.json
 artifacts:
   files: 
-    - 'image*.json'
+    - 'imageDetail.json'
     - 'appspec.yaml'
     - 'taskdef.json'
   discard-paths: yes
